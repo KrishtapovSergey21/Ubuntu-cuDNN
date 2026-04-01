@@ -1,0 +1,20 @@
+Installation Instructions:
+wget https://developer.download.nvidia.com/compute/cudnn/9.10.2/local_installers/cudnn-local-repo-ubuntu2004-9.10.2_1.0-1_amd64.deb
+sudo dpkg -i cudnn-local-repo-ubuntu2004-9.10.2_1.0-1_amd64.deb
+sudo cp /var/cudnn-local-repo-ubuntu2004-9.10.2/cudnn-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install cudnn
+
+To install for CUDA 11, perform the above configuration but install the CUDA 11 specific package:
+sudo apt-get -y install cudnn-cuda-11
+
+To install for CUDA 12, perform the above configuration but install the CUDA 12 specific package:
+sudo apt-get -y install cudnn-cuda-12
+
+
+
+cuDNN Version	Compute Capability	CUDA version	Ubuntu Version
+9.20.0			7.5~12.0			12.0~13.2	
+9.12.0			7.5~12.0			12.0~13.0	
+9.11.1			5.0~12.0			12.0~12.9		22.04, 24.04
+9.10.2			5.0~12.0			11.0~12.9		20.4, 22.04, 24.04
